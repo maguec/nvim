@@ -13,10 +13,6 @@ return require('packer').startup(function(use)
   use 'b0o/schemastore.nvim'
   use 'nvim-lua/plenary.nvim'
   
-  use {
-    "folke/neodev.nvim",
-    module = "neodev",
-  }
 
   --------------------------------------------
   -- Telescope all the things
@@ -54,6 +50,19 @@ return require('packer').startup(function(use)
   	'akinsho/bufferline.nvim', 
   	config = [[require('config.bufferline')]], -- May vary
   	requires = 'kyazdani42/nvim-web-devicons',
+  }
+
+  --------------------------------------------
+  -- Coding Stuff
+  --------------------------------------------
+  use 'folke/neodev.nvim'
+  use 'neovim/nvim-lspconfig'
+  use 'ray-x/guihua.lua'
+  use { 
+  	"ray-x/go.nvim",
+  	requires = "ray-x/guihua.lua",
+  	config = [[require('config.go')]], 
+  	ft = { "go" }
   }
 
 -- Close it

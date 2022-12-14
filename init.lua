@@ -4,3 +4,5 @@
 require('globalsettings')
 require('keybindings')
 require('plugins')
+require('configs')
+require('autocmd')
