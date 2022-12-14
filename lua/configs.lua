@@ -56,7 +56,9 @@ require('lualine').setup {
 }
 
 -- Theme setup
-require("tokyonight").setup({})
+require("tokyonight").setup({
+  style = "night",
+})
 
 -- Neodev Setup
 require("neodev").setup({ })

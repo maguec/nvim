@@ -4,7 +4,7 @@ local g = vim.g
 local o = vim.o
 
 -- Darkness is my friend
-o.background = 'dark'
+o.background  = 'dark'
 
 -- Better editor UI
 o.number         = true
@@ -16,4 +16,7 @@ o.cursorline     = true
 -- Map <leader> to ,
 g.mapleader      = ','
 g.maplocalleader = ','
+
+-- color
+vim.cmd[[colorscheme tokyonight-night]]
 
