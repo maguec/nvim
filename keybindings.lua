@@ -31,7 +31,7 @@ require('telescope').setup{
 require('lualine').setup {
   options = {
     icons_enabled = true,
-    theme = 'auto',
+    theme = 'tokyonight',
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
     disabled_filetypes = {
@@ -72,4 +72,7 @@ require('lualine').setup {
 -- Bufferline Setup
 vim.opt.termguicolors = true
 require("bufferline").setup{}
+
+-- Theme setup
+require("tokyonight").setup({})
 
