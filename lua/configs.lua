@@ -61,4 +61,6 @@ require("tokyonight").setup({})
 -- Neodev Setup
 require("neodev").setup({ })
 
+-- Setup Git
+require('vgit').setup()
 
