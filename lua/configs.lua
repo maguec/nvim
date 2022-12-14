@@ -63,4 +63,3 @@ require("neodev").setup({ })
 
 -- Setup Git
 require('vgit').setup()
-

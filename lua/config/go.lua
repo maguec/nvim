@@ -1,2 +1,1 @@
--- Golang setup
-require('go').setup({})
+require("go").setup({})

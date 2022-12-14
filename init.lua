@@ -6,3 +6,8 @@ require('keybindings')
 require('plugins')
 require('configs')
 require('autocmd')
+
+local lsp = require('lsp-zero')
+
+lsp.preset('recommended')
+lsp.setup()
