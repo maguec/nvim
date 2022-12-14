@@ -53,8 +53,9 @@ return require('packer').startup(function(use)
   }
 
   --------------------------------------------
-  -- Coding Stuff
+  --   Coding Stuff
   --------------------------------------------
+  use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
   use 'folke/neodev.nvim'
   use 'neovim/nvim-lspconfig'
   use 'ray-x/guihua.lua'
