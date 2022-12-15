@@ -6,3 +6,4 @@ lua/packer_compiled.lua
 lua/user
 plugin
 spell
+lua/.luarc.json
