@@ -24,6 +24,7 @@ return require('packer').startup(function(use)
   use 'hrsh7th/cmp-path'
   use 'b0o/schemastore.nvim'
   use 'nvim-lua/plenary.nvim'
+  use("vimwiki/vimwiki")
   
 
   --------------------------------------------
