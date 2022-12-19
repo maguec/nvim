@@ -16,6 +16,7 @@ o.cursorline     = true
 -- Map <leader> to ,
 g.mapleader      = ','
 g.maplocalleader = ','
+g.mouse          = ""
 
 -- color
 vim.cmd[[colorscheme tokyonight-night]]
