@@ -68,6 +68,7 @@ return require('packer').startup(function(use)
   --   Infrastructure Stuff
   --------------------------------------------
   use("hashivim/vim-terraform")
+  use("terrastruct/d2-vim")
 
   --------------------------------------------
   --   Coding Stuff
