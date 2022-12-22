@@ -6,6 +6,7 @@ require('globalsettings')
 require('keybindings')
 require('configs')
 require('autocmd')
+require('vimwiki')
 
 local lsp = require('lsp-zero')
 
