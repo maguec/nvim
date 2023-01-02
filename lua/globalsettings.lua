@@ -9,7 +9,7 @@ o.background  = 'dark'
 -- Better editor UI
 o.number         = true
 o.numberwidth    = 4
---o.relativenumber = true
+o.relativenumber = true
 o.signcolumn     = 'yes:2'
 o.cursorline     = true
 
