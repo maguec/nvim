@@ -82,7 +82,7 @@ return require('packer').startup(function(use)
       {'neovim/nvim-lspconfig'},
       {'williamboman/mason.nvim'},
       {'williamboman/mason-lspconfig.nvim'},
-  
+
       -- Autocompletion
       {'hrsh7th/nvim-cmp'},
       {'hrsh7th/cmp-buffer'},
@@ -90,7 +90,7 @@ return require('packer').startup(function(use)
       {'saadparwaiz1/cmp_luasnip'},
       {'hrsh7th/cmp-nvim-lsp'},
       {'hrsh7th/cmp-nvim-lua'},
-  
+
       -- Snippets
       {'L3MON4D3/LuaSnip'},
       {'rafamadriz/friendly-snippets'},
@@ -105,12 +105,16 @@ return require('packer').startup(function(use)
   use 'folke/neodev.nvim'
   use 'neovim/nvim-lspconfig'
   use 'ray-x/guihua.lua'
-  use { 
+  use {
   	"ray-x/go.nvim",
   	requires = "ray-x/guihua.lua",
-  	config = [[require('config.go')]], 
+  	config = [[require('config.go')]],
   	ft = { "go" }
   }
+      -- Git
+  use 'tpope/vim-fugitive'
+  use 'airblade/vim-gitgutter'
+
 
 -- Close it
   end)
