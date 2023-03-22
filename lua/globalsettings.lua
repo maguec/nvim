@@ -12,11 +12,11 @@ o.numberwidth    = 4
 o.relativenumber = true
 o.signcolumn     = 'yes:2'
 o.cursorline     = true
+o.mouse          = ""
 
 -- Map <leader> to ,
 g.mapleader      = ','
 g.maplocalleader = ','
-g.mouse          = ""
 
 -- color
 vim.cmd[[colorscheme tokyonight-night]]
