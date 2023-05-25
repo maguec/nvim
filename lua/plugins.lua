@@ -114,6 +114,8 @@ return require('packer').startup(function(use)
       -- Git
   use 'tpope/vim-fugitive'
   use 'airblade/vim-gitgutter'
+      -- Tabs
+  use 'godlygeek/tabular'
 
 
 -- Close it
