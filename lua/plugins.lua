@@ -116,6 +116,8 @@ return require('packer').startup(function(use)
   use 'airblade/vim-gitgutter'
       -- Tabs
   use 'godlygeek/tabular'
+      -- Ansible
+  use 'mfussenegger/nvim-ansible'
 
 
 -- Close it
