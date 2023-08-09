@@ -27,3 +27,10 @@ vim.keymap.set("n", "<leader>ti", ":!terraform init<CR>", opts)
 vim.keymap.set("n", "<leader>tv", ":!terraform validate<CR>", opts)
 vim.keymap.set("n", "<leader>tp", ":!terraform plan<CR>", opts)
 vim.keymap.set("n", "<leader>taa", ":!terraform apply -auto-approve<CR>", opts)
+
+---------------------------------------------------------------------
+--- Toggle the left side
+---------------------------------------------------------------------
+local myfunctions = require "myfunctions"
+vim.keymap.set('n', '<leader>tt', myfunctions.togglenums, {})
+
