@@ -23,5 +23,5 @@ vim.cmd[[colorscheme tokyonight-night]]
 
 -- neovide only settings
 if vim.g.neovide then
-    o.guifont = "DroidSansMono Nerd Font Mono:h18"
+    o.guifont = "DroidSansM Nerd Font Mono:h14"
 end
