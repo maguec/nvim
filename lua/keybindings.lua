@@ -23,14 +23,16 @@ vim.cmd([[autocmd BufRead,BufNewFile *.tf,*.tfvars set filetype=terraform]])
 vim.cmd([[autocmd BufRead,BufNewFile *.tfstate,*.tfstate.backup set filetype=json]])
 vim.cmd([[let g:terraform_fmt_on_save=1]])
 vim.cmd([[let g:terraform_align=1]])
-vim.keymap.set("n", "<leader>ti", ":!terraform init<CR>", opts)
-vim.keymap.set("n", "<leader>tv", ":!terraform validate<CR>", opts)
-vim.keymap.set("n", "<leader>tp", ":!terraform plan<CR>", opts)
-vim.keymap.set("n", "<leader>taa", ":!terraform apply -auto-approve<CR>", opts)
+vim.keymap.set("n", "<leader>ti", ":!terraform init<CR>", {})
+vim.keymap.set("n", "<leader>tv", ":!terraform validate<CR>", {})
+vim.keymap.set("n", "<leader>tp", ":!terraform plan<CR>", {})
+vim.keymap.set("n", "<leader>taa", ":!terraform apply -auto-approve<CR>", {})
 
 ---------------------------------------------------------------------
 --- Toggle the left side
 ---------------------------------------------------------------------
 local myfunctions = require "myfunctions"
 vim.keymap.set('n', '<leader>tt', myfunctions.togglenums, {})
+-- Toggle the LSP recommendations
+vim.keymap.set("n", "<leader>xx", function() require("trouble").open() end)
 

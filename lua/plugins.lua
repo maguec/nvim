@@ -91,6 +91,9 @@ return require('packer').startup(function(use)
       {'hrsh7th/cmp-nvim-lsp'},
       {'hrsh7th/cmp-nvim-lua'},
 
+      -- Trouble shows code errors
+      {'folke/trouble.nvim'},
+
       -- Snippets
       {'L3MON4D3/LuaSnip'},
       {'rafamadriz/friendly-snippets'},
