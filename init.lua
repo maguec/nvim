@@ -8,6 +8,7 @@ require('configs')
 require('autocmd')
 require('vimwiki')
 require('myfunctions')
+require('nvim-tree-config')
 
 local lsp = require('lsp-zero')
 
