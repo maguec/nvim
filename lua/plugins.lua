@@ -67,6 +67,11 @@ return require('packer').startup(function(use)
   }
 
   --------------------------------------------
+  --   File exporter
+  --------------------------------------------
+  use("nvim-tree/nvim-tree.lua")
+
+  --------------------------------------------
   --   Infrastructure Stuff
   --------------------------------------------
   use("hashivim/vim-terraform")
