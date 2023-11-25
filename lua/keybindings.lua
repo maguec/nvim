@@ -36,3 +36,6 @@ vim.keymap.set('n', '<leader>tt', myfunctions.togglenums, {})
 -- Toggle the LSP recommendations
 vim.keymap.set("n", "<leader>xx", function() require("trouble").open() end)
 vim.keymap.set("n", "<leader>xc", function() require("trouble").close() end)
+-- Toggle NvimTree
+vim.keymap.set('n', '<leader>nt', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
+
