@@ -25,5 +25,7 @@ vim.cmd[[colorscheme tokyonight-night]]
 if vim.g.neovide then
     o.guifont = "DroidSansM Nerd Font Mono:h16"
     vim.g.neovide_input_use_logo = 1
-    vim.api.nvim_set_keymap("n", "<c-v>", '"+p', {noremap=true, silent=true})
+    vim.api.nvim_set_keymap("n", "<S-Insert>", '~', {noremap=true, silent=true})
+    vim.api.nvim_set_keymap("n", "<Home>", '"+p', {noremap=true, silent=true})
+    vim.api.nvim_set_keymap("i", "<Home>", '"+p', {noremap=true, silent=true})
 end
