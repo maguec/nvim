@@ -23,10 +23,12 @@ vim.cmd[[colorscheme tokyonight-night]]
 
 -- neovide only settings
 if vim.g.neovide then
-    o.guifont = "DroidSansMono Nerd Font Mono:h18"
+    o.guifont = "DroidSansM Nerd Font Mono:h16"
     vim.g.neovide_input_use_logo = 1
-    vim.api.nvim_set_keymap('', '<D-v>', '+p<CR>', { noremap = true, silent = true})
-    vim.api.nvim_set_keymap('!', '<D-v>', '<C-R>+', { noremap = true, silent = true})
-    vim.api.nvim_set_keymap('t', '<D-v>', '<C-R>+', { noremap = true, silent = true})
-    vim.api.nvim_set_keymap('v', '<D-v>', '<C-R>+', { noremap = true, silent = true})
+    vim.api.nvim_set_keymap("n", "<S-Insert>", '~', {noremap=true, silent=true})
+    vim.api.nvim_set_keymap("i", "<S-Insert>", '~', {noremap=true, silent=true})
+    vim.api.nvim_set_keymap("n", "<Insert>", '`', {noremap=true, silent=true})
+    vim.api.nvim_set_keymap("i", "<Insert>", '`', {noremap=true, silent=true})
+    vim.api.nvim_set_keymap("n", "<Home>", '"+p', {noremap=true, silent=true})
+    vim.api.nvim_set_keymap("i", "<Home>", '"+p', {noremap=true, silent=true})
 end
