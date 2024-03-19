@@ -117,12 +117,12 @@ return require('packer').startup(function(use)
       {'rafamadriz/friendly-snippets'},
     }
   }
-  use {
-    'tanvirtin/vgit.nvim',
-    requires = {
-      'nvim-lua/plenary.nvim'
-    }
-  }
+  --  use {
+  --    'tanvirtin/vgit.nvim',
+  --    requires = {
+  --      'nvim-lua/plenary.nvim'
+  --    }
+  --  }
   use 'folke/neodev.nvim'
   use 'neovim/nvim-lspconfig'
   use 'ray-x/guihua.lua'
@@ -133,8 +133,17 @@ return require('packer').startup(function(use)
   	ft = { "go" }
   }
       -- Git
-  use 'tpope/vim-fugitive'
-  use 'airblade/vim-gitgutter'
+  use {
+  	"NeogitOrg/neogit",
+  	requires = { 
+		"nvim-lua/plenary.nvim",
+		"sindrets/diffview.nvim",
+		"nvim-telescope/telescope.nvim",
+		"ibhagwan/fzf-lua",
+		}
+	}
+--- use 'tpope/vim-fugitive'
+---  use 'airblade/vim-gitgutter'
       -- Tabs
   use 'godlygeek/tabular'
       -- Ansible
