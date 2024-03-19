@@ -79,7 +79,8 @@ require("nvim-tree").setup({
 require("neodev").setup({ })
 
 -- Setup Git
-require('vgit').setup()
+-- require('vgit').setup()
+require('neogit').setup()
 
 -- Setup Ansible
 vim.keymap.set('v', '<leader>te', function() require('ansible').run() end, { buffer = true, silent = true })
