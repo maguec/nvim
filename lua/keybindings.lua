@@ -28,6 +28,12 @@ vim.keymap.set("n", "<leader>tv", ":!terraform validate<CR>", {})
 vim.keymap.set("n", "<leader>tp", ":!terraform plan<CR>", {})
 vim.keymap.set("n", "<leader>taa", ":!terraform apply -auto-approve<CR>", {})
 
+
+---------------------------------------------------------------------
+-- Git Settings
+---------------------------------------------------------------------
+vim.keymap.set("n", "<leader>gt", ":Neogit<CR>", {})
+
 ---------------------------------------------------------------------
 --- Toggle the left side
 ---------------------------------------------------------------------
