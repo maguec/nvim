@@ -13,6 +13,11 @@ local packer_bootstrap = ensure_packer()
 -- vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
 
+  local uv = vim.uv
+  if uv == nil then uv = vim.loop end
+  local uname = uv.os_uname()
+
+
   --------------------------------------------
   -- Packer can manage itself
   --------------------------------------------
@@ -148,15 +153,21 @@ return require('packer').startup(function(use)
   use 'godlygeek/tabular'
       -- Ansible
   use 'mfussenegger/nvim-ansible'
-  use {
-    'Exafunction/codeium.vim',
-    config = function ()
-      vim.keymap.set('i', '<C-g>', function () return vim.fn['codeium#Accept']() end, { expr = true })
-      vim.keymap.set('i', '<c-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true })
-      vim.keymap.set('i', '<c-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true })
-      vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true })
-    end
-}
+
+  -----------------------------------------------------------------------------
+  -- In the case of the Mac we don't want this extension
+  -----------------------------------------------------------------------------
+  if uname.sysname ~= "Darwin" then
+    use {
+      'Exafunction/codeium.vim',
+      config = function ()
+        vim.keymap.set('i', '<C-g>', function () return vim.fn['codeium#Accept']() end, { expr = true })
+        vim.keymap.set('i', '<c-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true })
+        vim.keymap.set('i', '<c-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true })
+        vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true })
+      end
+    }
+  end
 
 -- Close it
   end)
