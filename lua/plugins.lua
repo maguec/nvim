@@ -158,6 +158,9 @@ return require('packer').startup(function(use)
   -- In the case of the Mac we don't want this extension
   -----------------------------------------------------------------------------
   if uname.sysname ~= "Darwin" then
+
+    use 'nvim-neorocks/rocks.nvim'
+
     use {
       'Exafunction/codeium.vim',
       config = function ()
