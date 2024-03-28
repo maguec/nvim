@@ -159,7 +159,20 @@ return require('packer').startup(function(use)
   -----------------------------------------------------------------------------
   if uname.sysname ~= "Darwin" then
 
-    use 'nvim-neorocks/rocks.nvim'
+  require('neorg').setup({
+    load = {
+        ["core.defaults"] = {},
+        ["core.concealer"] = {},
+        ["core.dirman"] = {
+            config = {
+                workspaces = {
+                    default = "~/neorg",
+                },
+                index = "index.norg",
+            }
+        }
+    }
+  })
 
     use {
       'Exafunction/codeium.vim',
