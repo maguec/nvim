@@ -2,3 +2,4 @@
 vim.wo.number = false
 vim.wo.relativenumber = false
 vim.wo.signcolumn = "no"
+vim.cmd([[autocmd BufWritePost * execute ':silent !git add % && git commit -m %']])
